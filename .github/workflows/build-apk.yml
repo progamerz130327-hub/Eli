@@ -20,11 +20,11 @@ jobs:
           channel: stable
           cache: true
 
-- name: Create Android project
-  run: flutter create --platforms=android .
+      - name: Create Android project
+        run: flutter create --platforms=android .
 
-- name: Get Flutter packages
-  run: flutter pub get
+      - name: Get Flutter packages
+        run: flutter pub get
 
       - name: Build APK
         run: flutter build apk --release
